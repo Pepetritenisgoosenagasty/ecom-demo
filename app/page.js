@@ -66,14 +66,17 @@ export default function Page() {
   const [loaded, setLoaded] = useState(false)
   const [options,setOptions] = useState({});
   const [sliderRef, instanceRef] = useKeenSlider({
-    loop: true,
+    slidesPerView: 1,
+    mode: "free-snap",
+    centered: true,
+    loop: false,
     initial: 0,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
     },
     created() {
       setLoaded(true)
-    },
+    }
   })
 
   async function getBanner() {
@@ -99,12 +102,17 @@ export default function Page() {
     getProducts()
     getCollections()
   }, [])
+
+  
   
 
   return (
     <>
       <section className="w-full md:px-12 md:py-12 relative">
-      <div ref={sliderRef} className="keen-slider">
+       {
+        banners?.length > 0 && (
+          <>
+            <div ref={sliderRef} className="keen-slider">
           {
             banners?.map((banner, i) => (
               <React.Fragment key={i}>
@@ -114,14 +122,9 @@ export default function Page() {
               </React.Fragment>
             ))
           }
-          {/* <div className="keen-slider__slide number-slide2">
-            <HeroSection />
-          </div>
-          <div className="keen-slider__slide number-slide3">
-            <HeroSection />
-          </div> */}
+        
         </div>
-        {loaded && instanceRef?.current && (
+        { loaded && instanceRef?.current && (
         <div className="absolute bottom-20 left-[100px] hidden md:block">
           {[
             ...Array(instanceRef?.current?.track?.details?.slides?.length)?.keys(),
@@ -138,6 +141,9 @@ export default function Page() {
           })}
           </div>)
 }
+          </>
+        )
+       }
       </section>
       <section className="px-12 py-12 md:py-0">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

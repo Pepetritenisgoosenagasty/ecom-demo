@@ -12,6 +12,11 @@ const nextConfig = {
           // pathname: '',
         },
       ],
+      experimental: {
+        fontLoaders: [
+          { loader: '@next/font/google', options: { subsets: ['latin'] } },
+        ],
+      },
     },
   }
   
