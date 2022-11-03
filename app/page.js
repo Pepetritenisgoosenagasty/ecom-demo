@@ -180,24 +180,7 @@ export default function Page() {
                 </React.Fragment>  
               ))
             }
-            {/* <div>
-              <Image src={EuropaLeague} alt="" className="w-full" width="100%" height="275px" />
-              <h4 className="text-[16px] font-[700] mt-4">Europe League</h4>
-            </div>
-            <div>
-              <Image src={CopaAmerica} alt="" className="w-full" width="100%" height="275px" />
-              <h4 className="text-[16px] font-[700] mt-4">Copa America</h4>
-            </div>
-            <div>
-              <Image src={Caf} alt="" className="w-full" width="100%" height="275px" />
-              <h4 className="text-[16px] font-[700] mt-4">Asian Cup</h4>
-            </div>
-            <div>
-              <Image src={AsianCup} alt="" className="w-full" width="100%" height="275px" />
-              <h4 className="text-[16px] font-[700] mt-4">
-                African Nations Cup
-              </h4>
-            </div> */}
+       
           </div>
         </div>
       </section>

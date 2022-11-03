@@ -45,7 +45,7 @@ export const PopularSection = ({data}) => {
         
           </div>
         </div>
-        <div className="pl-12 pr-0 md:pr-0 py-8 min-h-[500px]">
+        <div className="pl-12 pr-12 md:pr-0 py-8 min-h-[500px]">
         <div className="grid gird-cols-1 md:grid-cols-5 gap-10">
         {
             data?.map((product, i) => (

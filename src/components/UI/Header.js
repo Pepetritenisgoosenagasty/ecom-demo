@@ -81,7 +81,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="h-[32px] bg-white border-b border-slate-200 px-10 flex">
+          <div className="h-[32px] bg-white border-b border-slate-200 px-12 flex">
             <Navlist />
           </div>
         </div>
